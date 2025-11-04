@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&display=swap');
+
+/* Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bitcount Grid Single", system-ui;
+  font-weight: 200;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 5rem;
+}
+
+/* Title */
+h1 {
+  font-size: 3rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Row container */
+.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  margin-bottom: 2rem;
+  overflow: visible;
+}
+
+/* Link items */
+.link-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+  cursor: pointer;
+}
+
+.link-item img {
+  height: 6rem;
+  border-radius: 0.5rem;
+  object-fit: contain;
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.link-item:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+.link-item span {
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
+}
+
+/* Dropdown (Right side) */
+.has-dropdown {
+  position: relative;
+}
+
+.dropdown {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateY(-50%);
+  background: #111;
+  padding: 0.5rem 0.25rem;
+  border-radius: 0.5rem;
+  min-width: 10rem;
+  box-shadow: 0.15rem 0.15rem 0.25rem rgba(254, 254, 254, 0.5);
+  z-index: 10000; /* Ensure on top of all */
+  border: 0.15rem solid #ffffff;
+}
+
+.dropdown a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  font-size: 1.25rem;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.dropdown a:hover {
+  color: #ff0000;
+  background: #222;
+  font-weight: 400;
+}
+
+/* Show on hover */
+.has-dropdown:hover .dropdown {
+  display: flex;
+}
+
+/* Fix overlapping clipping */
+.row,
+body {
+  overflow: visible;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.75rem; /* space between the two text links */
+}
+
+.text-link {
+  color: #fff;
+  padding: 0.5rem;
+  border: 0.15rem dotted #fff;
+  border-radius: 0.5rem;
+  transition: color 0.3s ease;
+  text-align: center;
+}
+
+.text-link:hover {
+  color: #ff0000;
+  border: 0.15rem dotted #ff0000;
+}
